@@ -1,0 +1,20 @@
+{% extends "social/base.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <p class="article-content">{{ post.content }}</p>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" height="250" width="400">
+            {% else %}
+            <p></p>
+            {% endif %}            
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+

@@ -1,0 +1,17 @@
+
+{% extends "social/base.html" %}
+{% block content %}
+   {% if searched %}
+      <h1>You search for {{ searched }}</h1>
+      <br/>
+      {% for profile in profile_list %}
+      <div class="row justify-content-center mt-3">
+            <p><a style="text-decoration: none;" class="text-primary" href="{% url 'user-profile' profile.pk %}">@{{ profile.user }}</a></p>
+    </div>
+    {% endfor %}
+   {% else %}
+      <h1 style="text-align:center">You Search For?</h1>
+      <p style="text-align:center">Search for other users here</p>
+   {% endif %}
+   </center>
+{% endblock content %}

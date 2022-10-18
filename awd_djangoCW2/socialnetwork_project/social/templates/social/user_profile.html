@@ -1,0 +1,29 @@
+{% extends "social/base.html" %}
+{% block content %}
+<div class="content-section">
+  <div class="media">
+    <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+    <div class="media-body">
+      <h2 class="account-heading">{{ user.username }}</h2>
+      <p class="text-secondary">{{ user.email }}</p>
+    </div>
+  </div>  
+  {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+              
+            <div class="article-metadata">
+              <a class="mr-2" href="{% url 'user-profile' post.author.profile.pk %}">{{ post.author }}</a>
+              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <p class="article-content">{{ post.content }}</p>
+            {% if post.image %}
+            <img src="{{ post.image.url }}" height="250" width="400">
+            {% else %}
+            <p></p>
+            {% endif %}
+          </div>
+        </article>
+    {% endfor %}
+</div>
+{% endblock content %}
