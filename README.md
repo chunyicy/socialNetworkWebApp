@@ -1,8 +1,9 @@
 # socialNetworkWebApp 
 
 
-This project (end term coursework) is created for my Advanced Web Development module.
-I’ve created a social networking website that allowed users to create a profile, add friends, create posts, chat with friends etc 
+This social networking website project (end term coursework) is created for my Advanced Web Development module. 
+
+This app allowed users to create a profile, add friends, create posts, chat with friends etc 
 
 <br/>
 
@@ -40,6 +41,68 @@ k) correct use of URL routing <br/>
 m) An appropriate method for storing and displaying media files is given <br/>
 Implements and appropriate database model to model accounts, the stored data
 and the relationships between accounts
+
+<br/>
+
+<br/>
+
+## Functionality: User Registration
+
+<br/>
+
+Implemented a user registration form using Django's UserCreationForm, allowing users to create accounts with usernames, passwords, and email addresses. Leverage Django's built-in authentication system for handling user account creation and management.
+
+<br/>
+
+#### Define user registration form:
+
+<br/>
+
+![registrationform](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/bf8b5861-1a2e-4e64-b9ba-e70f6b1477b0)
+
+<br/>
+
+#### Define a view file to handle user registration logic and render the registration form:
+
+<br/>
+
+![registerview](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/43940315-e9d0-4cbd-a75f-9b475251f21b)
+
+<br/>
+
+#### Create template files to display the registration form:
+
+<br/>
+
+![registertemplate](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/cb8bb471-4c9a-4cb9-b01e-b2cba57d287e)
+
+![registertemplate2](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/23d99732-40d8-4839-a6db-0559ec64c28b)
+
+<br/>
+
+#### Add a URL pattern to map the registration view:
+
+![registerurl](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/30f2194d-a052-4c9f-b4ee-bce17927d4f5)
+
+<br/>
+
+#### Registration page:
+
+<br/>
+
+![registerpage](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/ef05c393-7760-47bc-ba1a-6d619bcee541)
+
+<br/>
+
+A success message is displayed upon successful account creation and then redirects the user to the login page.
+
+<br/>
+
+![registermessage](https://github.com/chunyicy/socialNetworkWebApp/assets/116086176/29c8d583-3854-44ae-bd3f-5ff335ac2513)
+
+
+
+
 
 <br/>
 <br/>
