@@ -370,7 +370,13 @@ Create views (views.py) to handle adding and removing friends from the user's fr
 
 <br/>
 
-#### Functionality: Users can chat in Realtime with friends
+<br/>
+
+<br/>
+
+## Functionality: Users can chat in Realtime with friends
+
+<br/>
 
 ![chatRoom](https://user-images.githubusercontent.com/116086176/197456080-ca7e1c2c-76dc-49b3-9d0c-4d7647ce7d80.jpg)
 
