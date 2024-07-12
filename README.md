@@ -3,7 +3,7 @@
 
 This social networking website project (end term coursework) is created for my Advanced Web Development module. 
 
-This app allowed users to create a profile, add friends, create posts, chat with friends etc 
+This app allowed users to create, update profile, add or remove friends, create posts, chat in real time with friends.
 
 <br/>
 
@@ -184,17 +184,193 @@ Displays a short message to confirm the user that they have been logged out and 
 <br/>
 <br/>
 
+## Functionality: Update Profile
+
+<br/>
+
+#### Define Profile Model:
+
+Create Profile model to store the user details and the profile picture.
+
+<br/>
+
+![updateprofilemodel](https://github.com/user-attachments/assets/ef213da5-d709-4339-8c02-78c9c2b98b4a)
+
+<br/>
+
+#### Create UserUpdateForm and ProfileUpdateForm:
+
+To collect and update profile information.
+
+<br/>
+
+![profileupdateform](https://github.com/user-attachments/assets/9cb8876f-72ba-478e-9895-fa2d31a9709c)
+
+<br/>
+
+#### Create a View for Profile Update:
+
+Handles updating the user profile. This view will render the form, process form submission, and update the profile.
+
+<br/>
+
+![updateprofileview](https://github.com/user-attachments/assets/c8773b47-fe9a-4c3a-b5cb-b895a930beec)
+
+<br/>
+
+#### Create a Template for Updating Profile
+
+Create an HTML template to display the form:
+
+![updateprofiletemplate](https://github.com/user-attachments/assets/78d7c385-beae-4cd3-9ddd-6d6cb91a2d6f)
+
+<br/>
+
+#### Update URLs:
+
+Create a url path for the update profile page so that the user can update their profile.
+
+<br/>
+
+![image](https://github.com/user-attachments/assets/f71b09a2-28c1-4518-950a-ea4d59459116)
+
+<br/>
+
+
+#### Define a Signal Receiver:
+
+Define a signal receiver function that listens for the post_save signal sent by the User model. This function will create a Profile instance whenever a new User instance is created.
+
+<br/>
+
+#### Update Profile Page:
+
+<br/>
+![updateprofilepage3](https://github.com/user-attachments/assets/7d87c1e9-5db9-469f-8eca-ca6236e0aa03)
+
+<br/>
+
+![updateprofilepage2](https://github.com/user-attachments/assets/8fedd461-5849-4cf6-895a-b354b50e7fb9)
+
+<br/>
+
+![updateprofilepage](https://github.com/user-attachments/assets/2bff4ba9-6c9c-459f-bd7b-e7e8a42acc56)
+
+<br/>
+
+![updateprofilesignalreceiver](https://github.com/user-attachments/assets/ef15933f-5c9e-41c3-b57c-d12afe426e95)
+
+<br/>
+
+<br/>
+
+## Functionality: Create Post:
+
+<br/>
+
+- Define Post Model: This model will include fields such as content, image, date published, author (linked to the User model).
+- Create a Form for Post Creation:  Allows users to input data for creating a post.
+- Create Views to Handle Post Creation: Define views to render the form and process form submissions.
+- Create a Template for Post Creation: Create a template to display the form for creating a post.
+- Set Up URLs: Configure URL patterns (urls.py) to map the view for creating a post.
+
+<br/>
+
+![createpost2](https://github.com/user-attachments/assets/2ac2c00a-55b8-4795-8c77-a39ad8541cc3)
+
+<br/>
+
+![createpost1](https://github.com/user-attachments/assets/477cec8f-aa47-4edf-bd8d-bf452e5800c1)
+
+<br/>
+
+![createpost](https://github.com/user-attachments/assets/b0374bd5-4fc3-43d5-bbdf-b2683eaff811)
+
+<br/>
+<br/>
+
+## Functionality: Search for a User
+
+<br/>
+
+#### Define Views to Handle User Search
+
+Create views (views.py) to render the search form and process search queries.
+
+<br/>
+
+![searchview](https://github.com/user-attachments/assets/61d2ed4c-9917-4c9b-8b9e-2855d233ff16)
+
+<br/>
+
+#### Create Templates for User Search
+
+Design templates for displaying search results.
+
+<br/>
+
+![searchtemplate](https://github.com/user-attachments/assets/2fee7a21-cdab-4b8c-82ff-3460d91fb691)
+
+<br/>
+
+#### Configure URLs
+
+Set up URL patterns (urls.py) to map the views for user search.
+
+<br/>
+
+![searchurl](https://github.com/user-attachments/assets/159824b7-9313-4955-83e6-525c72e64064)
+
+<br/>
+
+![searchpage1](https://github.com/user-attachments/assets/b457e686-a7c5-4716-a72f-1a36aab89e75)
+
+<br/>
+
+![searchpage](https://github.com/user-attachments/assets/0bdf6bf3-0609-4711-babf-84ce8a0b1315)
+
+<br/>
+<br/>
+
+## Functionality: Add a Friend or Remove a Friend
+
+#### Create a Friendship Model:
+
+Define a model to represent the friendship relationship between users. This model will use a many-to-many relationship with the User model.
+
+![friendmodel](https://github.com/user-attachments/assets/4619cce3-b6f6-4728-884f-3ecbddf223d2)
+
+<br/>
+
+#### Define Views for Adding and Removing Friends
+
+Create views (views.py) to handle adding and removing friends from the user's friend list.
+
+<br/>
+
+![addorremove](https://github.com/user-attachments/assets/b0e7d1db-79b6-49a2-bca4-c94287d44f68)
+
+<br/>
+
+#### Add/ Remove friend page:
+
+<br/>
+![friendlist](https://github.com/user-attachments/assets/edd10c26-b0c6-41e7-91ad-1fdf8ba16fc4)
+
+<br/>
+
+![addfriend](https://github.com/user-attachments/assets/c497bcfe-eeab-48a5-9dd8-4ed8af483d71)
 
 
 
+<br/>
 
-![friendList](https://user-images.githubusercontent.com/116086176/197456002-4adbc2f9-7aa6-4a82-84de-9dbcca148bbf.jpg)
-
-
-
-![search](https://user-images.githubusercontent.com/116086176/197456050-823098b0-a0b5-499f-ae66-7c03857f37bc.jpg)
+![removefriend](https://github.com/user-attachments/assets/ebabb8e0-0587-4acb-8b26-2a2320920ee4)
 
 
+<br/>
+
+#### Functionality: Users can chat in Realtime with friends
 
 ![chatRoom](https://user-images.githubusercontent.com/116086176/197456080-ca7e1c2c-76dc-49b3-9d0c-4d7647ce7d80.jpg)
 
